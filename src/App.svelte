@@ -4,19 +4,28 @@
 </script>
 
 <main>
+  <h1>Buy a plant!</h1>
 	<Item />
 	<Checkout />
 </main>
 
 <style>
 	main {
+		font-family: "Roboto", sans-serif;
+		width: 350px;
+		margin: auto;
+		padding: 20px;
+		position: relative;
+		background: #ffffff;
 		text-align: center;
-		max-width: 240px;
 		display: flex;
-		margin: 82px auto 32px;
-		padding: 0 16px;
-		max-width: 960px;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
+	}
+
+	h1 {
+		font-size: 65px;
+		font-weight: bold;
 	}
 </style>
