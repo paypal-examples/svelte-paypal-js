@@ -1,13 +1,14 @@
 <script>
   import { loadScript } from "@paypal/paypal-js";
-
-  const CLIENT_ID = "your-client-id";
+  
+  export let cartTotal = 0.01;
+  const CLIENT_ID = "test"; // change this to your own client id
 
   loadScript({ "client-id": CLIENT_ID }).then((paypal) => {
     paypal
       .Buttons({
         style: {
-          color: "white",
+          color: "blue",
           shape: "pill",
         },
         createOrder: function (data, actions) {
@@ -16,7 +17,7 @@
             purchase_units: [
               {
                 amount: {
-                  value: "0.01",
+                  value: cartTotal,
                 },
               },
             ],
